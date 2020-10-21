@@ -7,7 +7,7 @@ public class NumbersGame {
     public void doesItBelongToCompartment() {
         while (true) {
             setX();
-            if (x >= 100 && x <= 200) {
+            if ((x >= 100 && x <= 200) && (x % 3) == 0) {
                 printInfo(true);
                 break;
             } else {
@@ -23,7 +23,7 @@ public class NumbersGame {
 
     private void printInfo(boolean yesOrNo) {
         if (yesOrNo)
-            System.out.println("Udalo Ci się trafić w przedział!");
+            System.out.println("Udalo Ci się trafić!");
         else
             System.out.print("Lipa... ");
     }
