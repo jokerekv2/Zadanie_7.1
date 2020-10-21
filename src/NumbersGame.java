@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Numbers {
+public class NumbersGame {
     private int x;
     private Scanner sc = new Scanner(System.in);
 
