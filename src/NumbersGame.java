@@ -21,8 +21,7 @@ public class NumbersGame {
 
     private int setX() {
         System.out.print("Podaj liczbę: ");
-        int x = sc.nextInt();
-        return x;
+        return sc.nextInt();
     }
 
 
