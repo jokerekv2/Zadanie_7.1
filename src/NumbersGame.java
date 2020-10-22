@@ -1,30 +1,29 @@
 import java.util.Scanner;
 
 public class NumbersGame {
-    private int x;
     private Scanner sc = new Scanner(System.in);
 
     public void doesItBelongToCompartment() {
         while (true) {
-            setX();
+            int x = setX();
             if ((x >= 100 && x <= 200) && (x % 3) == 0) {
-                printInfo(true);
+                System.out.println("Udalo Ci się trafić!");
                 break;
+            } else if (x < 100) {
+                System.out.print("Lipa... Podana liczba jest za mała. ");
+            } else if ((x >= 100 && x <= 200) && (x % 3) != 0) {
+                System.out.print("Lipa... Podana liczba jest w przedziale, ale nie jest podzielna przez 3. ");
             } else {
-                printInfo(false);
+                System.out.println("Lipa... Podana liczba jest za duża. ");
             }
         }
     }
 
-    private void setX() {
+    private int setX() {
         System.out.print("Podaj liczbę: ");
-        x = sc.nextInt();
+        int x = sc.nextInt();
+        return x;
     }
 
-    private void printInfo(boolean yesOrNo) {
-        if (yesOrNo)
-            System.out.println("Udalo Ci się trafić!");
-        else
-            System.out.print("Lipa... ");
-    }
+
 }
