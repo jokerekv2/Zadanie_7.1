@@ -4,7 +4,7 @@ public class NumbersGame {
     private Scanner sc = new Scanner(System.in);
 
     public void doesItBelongToCompartment() {
-        int x = 0;
+        int x;
         do {
             x = getXFromUser();
             if (x < 100) {
